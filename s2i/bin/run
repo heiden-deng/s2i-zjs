@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DIR=$(cd `dirname $0`;pwd)
+${DIR}/wait-for-it.sh ${MYSQL_HOST}:${MYSQL_PORT}
+exec $CATALINA_HOME/bin/catalina.sh run
